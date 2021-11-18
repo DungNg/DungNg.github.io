@@ -26,11 +26,10 @@ body {
 }
 
 .card {
-    /* font-family: "HUGS"; */
     background-color: var(--secondary-color);
     color: var(--text-color);
-    /* border-radius:  */
     transition: all .2s ease;
+    border-radius: 50px;
 }
 
 .card:hover {
