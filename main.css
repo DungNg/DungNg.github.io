@@ -3,6 +3,11 @@
     src: url("./assets/OdinRounded-Yd82.ttf");
 }
 
+@font-face {
+    font-family: "Tahoma";
+    src: url("./assets/Tahoma-6YeMg.ttf");
+}
+
 :root{
     --main-color: #FD7FA9;
     --secondary-color: #344c64 ;
@@ -10,13 +15,14 @@
 }
 
 body {
-    font-family: "Odin";
+    font-family: "Tahoma";
     background-color: var(--main-color);
     font-size: 28px;
 }
 
 .name-container {
     color: var(--secondary-color);
+    margin-bottom: .5rem;
 }
 
 .container {
@@ -36,7 +42,7 @@ body {
     cursor: pointer;
     background-color: var(--text-color);
     color: var(--secondary-color);
-    border-color: var(--secondary-color);
+    border-color: var(--main-color);
 }
 
 .row {
@@ -48,7 +54,7 @@ body {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 1pt solid var(--text-color);
+    border: 2pt solid var(--text-color);
 }
 
 .fab{
