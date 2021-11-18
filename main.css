@@ -4,7 +4,7 @@
 }
 
 :root{
-    --main-color: #FAD02C;
+    --main-color: #FD7FA9;
     --secondary-color: #27396D ;
     --text-color: #E9EAEC;
 }
@@ -16,7 +16,7 @@ body {
 }
 
 .name-container {
-    color: #333652;
+    color: var(--secondary-color);
 }
 
 .container {
