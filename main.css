@@ -5,7 +5,7 @@
 
 :root{
     --main-color: #FD7FA9;
-    --secondary-color: #27396D ;
+    --secondary-color: #344c64 ;
     --text-color: #E9EAEC;
 }
 
@@ -29,7 +29,7 @@ body {
     background-color: var(--secondary-color);
     color: var(--text-color);
     transition: all .2s ease;
-    border-radius: 50px;
+    border-radius: .5rem;
 }
 
 .card:hover {
@@ -49,4 +49,8 @@ body {
     border-radius: 50%;
     object-fit: cover;
     border: 1pt solid var(--text-color);
+}
+
+.fab{
+    font-size: 30px;
 }
