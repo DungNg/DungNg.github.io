@@ -3,9 +3,15 @@
     src: url("./assets/OdinRounded-Yd82.ttf");
 }
 
+:root{
+    --main-color: #FAD02C;
+    --secondary-color: #27396D ;
+    --text-color: #E9EAEC;
+}
+
 body {
     font-family: "Odin";
-    background-color: #FAD02C;
+    background-color: var(--main-color);
     font-size: 28px;
 }
 
@@ -21,17 +27,17 @@ body {
 
 .card {
     /* font-family: "HUGS"; */
-    background-color: #333652;
-    color: #E9EAEC;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
     /* border-radius:  */
     transition: all .2s ease;
 }
 
 .card:hover {
     cursor: pointer;
-    background-color: #E9EAEC;
-    color: #333652;
-    border-color: #333652;
+    background-color: var(--text-color);
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
 }
 
 .row {
@@ -43,5 +49,5 @@ body {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 1pt solid white;
+    border: 1pt solid var(--text-color);
 }
