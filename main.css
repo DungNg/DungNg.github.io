@@ -22,7 +22,8 @@ body {
 
 .name-container {
     color: var(--secondary-color);
-    margin-bottom: .5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
 }
 
 .container {
