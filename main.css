@@ -1,0 +1,47 @@
+@font-face {
+    font-family: "Odin";
+    src: url("./assets/OdinRounded-Yd82.ttf");
+}
+
+body {
+    font-family: "Odin";
+    background-color: #FAD02C;
+    font-size: 28px;
+}
+
+.name-container {
+    color: #333652;
+}
+
+.container {
+    padding-top: 10vh;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+.card {
+    /* font-family: "HUGS"; */
+    background-color: #333652;
+    color: #E9EAEC;
+    /* border-radius:  */
+    transition: all .2s ease;
+}
+
+.card:hover {
+    cursor: pointer;
+    background-color: #E9EAEC;
+    color: #333652;
+    border-color: #333652;
+}
+
+.row {
+    margin-bottom: 1rem;
+}
+
+.image-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1pt solid white;
+}
