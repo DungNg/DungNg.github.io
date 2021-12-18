@@ -29,23 +29,24 @@
 
         .header {
             background-color: #334756;
-            /* position: sticky;
-            top: 1em; */
         }
 
         .left-menu {
             background-color: #334756;
             display: flex;
             flex-direction: column;
-            gap: 1em;
-            position: absolute;
+            position: fixed;
             left: -100%;
-            width: calc(100% - 4em);
-            height: calc(100% - 4em);
-            transition: all .5s ease;
+            bottom: 0;
+            top: 0;
+            /* width: calc(100% - 20em); */
+            width: 60%;
+            transition: all .5s ease-in-out;
+            z-index: 1;
+            gap: 1em;
         }
 
-        .left-menu div{
+        .left-menu div {
             width: 100%;
             text-align: center;
             background-color: #082032;
@@ -53,7 +54,7 @@
             padding: .5em 0;
         }
 
-        .left-menu div:hover{
+        .left-menu div:hover {
             cursor: pointer;
         }
 
@@ -63,6 +64,21 @@
 
         .footer {
             background-color: #334756;
+        }
+
+        .icon {
+            background-color: #334756;
+        }
+
+        .active {
+            left: 1em;
+        }
+
+        .btn {
+            border-radius: .5em;
+            font-weight: bold;
+            font-size: 1.1rem;
+            border: 1px solid transparent;
         }
 
         @media (min-width: 768px) {
@@ -102,42 +118,9 @@
                 grid-area: footer;
             }
 
-            .icon{
+            .icon {
                 display: none;
             }
-
-            .btn-exit{
-                display: none;
-            }
-        }
-
-        .icon{
-            background-color: #334756;
-        }
-
-        .active{
-            left: 1em;
-        }
-
-        .btn{
-            border-radius: .5em;
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-
-        .btn-exit{
-            position: absolute;
-            top: -.5em;
-            right: -.5em;
-            border-radius: 50%;
-            border: 1px solid transparent;
-            background-color: red;
-            color: white;
-        }
-
-        .btn-exit:hover{
-            color: black;
-            background-color:white;
         }
     </style>
 </head>
@@ -162,7 +145,6 @@
             </div>
         </div>
         <div class="left-menu rounded">
-            <button class="btn-exit">x</button>
             <div>Device</div>
             <div>About</div>
             <div>Home</div>
@@ -326,16 +308,22 @@
     let button = document.querySelector('.btn');
     let leftMenu = document.querySelector('.left-menu');
     let exitBtn = document.querySelector('.btn-exit');
-    console.log('button',button);
-    console.log('leftMenu',leftMenu);
-    button.addEventListener('click', function(e){
+    let container = document.querySelector('.container');
+    button.addEventListener('click', function (e) {
         leftMenu.classList.add('active');
-        document.body.style.overflow = "hidden";
+        // document.body.style.overflow = "hidden";
     })
 
-    exitBtn.addEventListener('click', function(e){
+    document.addEventListener('click', closeMenu);
+
+    exitBtn.addEventListener('click', closeMenu);
+
+    function closeMenu(e) {
+        if (e.target.matches(".btn") || e.target.matches(".left-menu, .left-menu *"))
+            return;
         leftMenu.classList.remove('active');
-        document.body.style.overflow = "auto";
-    });
+        // document.body.style.overflow = "auto";
+    }
 </script>
+
 </html>
